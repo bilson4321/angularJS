@@ -1,0 +1,10 @@
+angular.module('notCompleted',[])
+.component('notCompletedComponent',
+{
+    templateUrl:"app/notCompleted/notCompleted.html"
+})
+.controller('notCompletedController',['$scope','$rootScope',function($scope,$rootScope){
+    $scope.tasks=$rootScope.taskList.filter( 
+    element=>element.status!==true
+    );
+}]);

@@ -1,0 +1,16 @@
+<div ng-controller="completedController">
+    <table border="1px solid black" width="210
+    ">
+        <tr>
+            <th>Task</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+        <tr ng-repeat="task in tasks">
+            <td>{{task.name}}</td>
+            <td><input type="checkbox" ng-model="task.status">{{task.status?'done':'pending'}}</td>
+            <td>edit</td>
+        </tr>
+        {{taskList}}
+    </table>
+</div>
